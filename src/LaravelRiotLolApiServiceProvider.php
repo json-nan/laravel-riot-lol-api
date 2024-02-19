@@ -2,9 +2,9 @@
 
 namespace JsonNaN\LaravelRiotLolApi;
 
+use JsonNaN\LaravelRiotLolApi\Commands\LaravelRiotLolApiCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use JsonNaN\LaravelRiotLolApi\Commands\LaravelRiotLolApiCommand;
 
 class LaravelRiotLolApiServiceProvider extends PackageServiceProvider
 {

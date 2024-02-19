@@ -4,5 +4,4 @@ namespace JsonNaN\LaravelRiotLolApi;
 
 class LaravelRiotLolApi
 {
-
 }
