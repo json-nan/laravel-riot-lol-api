@@ -6,13 +6,13 @@ use Illuminate\Console\Command;
 
 class LaravelRiotLolApiCommand extends Command
 {
-    public $signature = 'laravel-riot-lol-api';
+    public $signature = 'laravel-riot-lol-api:test';
 
-    public $description = 'My command';
+    public $description = 'Command for test the package was installed correctly.';
 
     public function handle(): int
     {
-        $this->comment('All done');
+        $this->comment('All good!');
 
         return self::SUCCESS;
     }

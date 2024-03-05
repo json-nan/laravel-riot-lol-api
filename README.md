@@ -1,9 +1,9 @@
 # Package to facilitate the connection with the Riot Games API in LOL
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/jsonnan/laravel-riot-lol-api.svg?style=flat-square)](https://packagist.org/packages/jsonnan/laravel-riot-lol-api)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/jsonnan/laravel-riot-lol-api/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/jsonnan/laravel-riot-lol-api/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/jsonnan/laravel-riot-lol-api/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/jsonnan/laravel-riot-lol-api/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/jsonnan/laravel-riot-lol-api.svg?style=flat-square)](https://packagist.org/packages/jsonnan/laravel-riot-lol-api)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/json-nan/laravel-riot-lol-api.svg?style=flat-square)](https://packagist.org/packages/json-nan/laravel-riot-lol-api)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/json-nan/laravel-riot-lol-api/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/json-nan/laravel-riot-lol-api/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/json-nan/laravel-riot-lol-api/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/json-nan/laravel-riot-lol-api/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/json-nan/laravel-riot-lol-api.svg?style=flat-square)](https://packagist.org/packages/json-nan/laravel-riot-lol-api)
 
 This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
 
@@ -20,7 +20,7 @@ We highly appreciate you sending us a postcard from your hometown, mentioning wh
 You can install the package via composer:
 
 ```bash
-composer require jsonnan/laravel-riot-lol-api
+composer require json-nan/laravel-riot-lol-api
 ```
 
 You can publish and run the migrations with:
@@ -76,8 +76,8 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [Jasson López](https://github.com/JsonNaN)
-- [All Contributors](../../contributors)
+-   [Jasson López](https://github.com/JsonNaN)
+-   [All Contributors](../../contributors)
 
 ## License
 
