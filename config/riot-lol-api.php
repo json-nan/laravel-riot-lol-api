@@ -11,7 +11,7 @@ return [
     /*
      * API URL for Riot Games, you can find the available URLs in the Riot Games API documentation
      */
-    'api_url' => env('RIOT_LOL_API_URL', 'api.riotgames.com'),
+    'api_domain' => env('RIOT_LOL_API_DOMAIN', 'api.riotgames.com'),
 
     /*
      * Region for the Riot Games API, available regions are: americas, asia, europe, sea

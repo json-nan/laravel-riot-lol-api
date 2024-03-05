@@ -3,8 +3,8 @@
 namespace JsonNaN\LaravelRiotLolApi\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Orchestra\Testbench\TestCase as Orchestra;
 use JsonNaN\LaravelRiotLolApi\LaravelRiotLolApiServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {

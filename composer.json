@@ -1,24 +1,27 @@
 {
-    "name": "jsonnan/laravel-riot-lol-api",
+    "name": "json-nan/laravel-riot-lol-api",
     "description": "Package to facilitate the connection with the Riot Games API in LOL",
     "keywords": [
-        "Jasson López",
+        "JsonNaN",
+        "Riot Games",
+        "LOL",
+        "API",
         "laravel",
-        "laravel-riot-lol-api"
+        "laravel-riot-lol-api",
     ],
-    "homepage": "https://github.com/jsonnan/laravel-riot-lol-api",
+    "homepage": "https://github.com/json-nan/laravel-riot-lol-api",
     "license": "MIT",
     "authors": [
         {
-            "name": "Jasson López",
+            "name": "JsonNaN",
             "email": "jasson_alex99@hotmail.com",
             "role": "Developer"
         }
     ],
     "require": {
         "php": "^8.1",
-        "spatie/laravel-package-tools": "^1.14.0",
-        "illuminate/contracts": "^10.0"
+        "illuminate/contracts": "^10.0",
+        "spatie/laravel-package-tools": "^1.14.0"
     },
     "require-dev": {
         "laravel/pint": "^1.0",
