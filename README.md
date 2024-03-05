@@ -5,15 +5,17 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/json-nan/laravel-riot-lol-api/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/json-nan/laravel-riot-lol-api/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/json-nan/laravel-riot-lol-api.svg?style=flat-square)](https://packagist.org/packages/json-nan/laravel-riot-lol-api)
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+This package is a wrapper for the Riot Games API in League of Legends, it is designed to facilitate the connection with the API and to be able to use the data in a more friendly way.
 
-## Support us
+## Requirements
 
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/laravel-riot-lol-api.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/laravel-riot-lol-api)
+-   PHP 8.1 or higher
+-   Laravel 10 or higher
+-   Riot Games API Key from [Riot Games Developer](https://developer.riotgames.com/)
 
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+## Features
+-   Get Summoner info
+-   Get Player account info 
 
 ## Installation
 
@@ -23,12 +25,6 @@ You can install the package via composer:
 composer require json-nan/laravel-riot-lol-api
 ```
 
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag="laravel-riot-lol-api-migrations"
-php artisan migrate
-```
 
 You can publish the config file with:
 
@@ -36,48 +32,38 @@ You can publish the config file with:
 php artisan vendor:publish --tag="laravel-riot-lol-api-config"
 ```
 
-This is the contents of the published config file:
-
-```php
-return [
-];
+## Configuration
+It requires the following environment variables:
+```
+RIOT_LOL_API_KEY=
 ```
 
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag="laravel-riot-lol-api-views"
+You can configure this optional environment variable:
+```
+RIOT_LOL_API_DOMAIN=
+RIOT_LOL_REGION=
+RIOT_LOL_PLATFORM=
+RIOT_LOL_DATA_DRAGON_VERSION=
 ```
 
 ## Usage
 
 ```php
-$laravelRiotLolApi = new JsonNaN\LaravelRiotLolApi();
-echo $laravelRiotLolApi->echoPhrase('Hello, JsonNaN!');
-```
+use JsonNaN\LaravelRiotLolApi\LaravelRiotLolApi;
 
-## Testing
 
-```bash
-composer test
+$riotApi = new LaravelRiotLolApi();
+
+$riotApi->getPlayerAccountByRiotId("Name#TAG")
 ```
 
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
 
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
-
-## Security Vulnerabilities
-
-Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
-
 ## Credits
 
--   [Jasson López](https://github.com/JsonNaN)
--   [All Contributors](../../contributors)
+-   [Jasson López](https://github.com/json-nan)
 
 ## License
 
