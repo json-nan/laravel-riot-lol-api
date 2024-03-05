@@ -44,7 +44,7 @@ class LaravelRiotLolApi
      */
     protected function validateRiotId(string $riotId): void
     {
-        if (!$this->isValidRiotIdFormat($riotId)) {
+        if (! $this->isValidRiotIdFormat($riotId)) {
             throw new InvalidArgumentException('Invalid Riot ID format');
         }
     }
@@ -71,8 +71,8 @@ class LaravelRiotLolApi
      * Method to get player account information by Riot ID
      */
     public function getPlayerAccountByRiotId(string $riotId,
-                                             string $region = 'americas',
-                                             bool   $decode = true): Collection|Response
+        string $region = 'americas',
+        bool $decode = true): Collection|Response
     {
         [$gameName, $tagLine] = $this->splitRiotId($riotId);
 
@@ -87,8 +87,8 @@ class LaravelRiotLolApi
      * Method to get player account information by PUUID
      */
     public function getPlayerAccountByPuuid(string $puuid,
-                                            string $region = 'americas',
-                                            bool   $decode = true): Collection|Response
+        string $region = 'americas',
+        bool $decode = true): Collection|Response
     {
         $url = $this->getApiUrl("riot/account/v1/accounts/by-puuid/{$puuid}", $region);
 
@@ -101,9 +101,9 @@ class LaravelRiotLolApi
      * Method to get player game information by user PUUID
      */
     public function getSummonerByPuuid(string $puuid,
-                                       string $region = 'la1',
-                                       string $version = 'v4',
-                                       bool   $decode = true): Collection|Response
+        string $region = 'la1',
+        string $version = 'v4',
+        bool $decode = true): Collection|Response
     {
         $url = $this->getApiUrl("/lol/summoner/{$version}/summoners/by-puuid/{$puuid}", $region);
 
@@ -116,9 +116,9 @@ class LaravelRiotLolApi
      * Method to get player game information by Riot ID
      */
     public function getSummonerByRiotId(string $riotId,
-                                        string $region = 'la1',
-                                        string $version = 'v4',
-                                        bool   $decode = true): Collection|Response
+        string $region = 'la1',
+        string $version = 'v4',
+        bool $decode = true): Collection|Response
     {
         $playerAccount = $this->getPlayerAccountByRiotId($riotId);
 
@@ -131,9 +131,9 @@ class LaravelRiotLolApi
      * Method to get player game information by deprecated summoner name
      */
     public function getSummonerBySummonerName(string $summonerName,
-                                              string $region = 'la1',
-                                              string $version = 'v4',
-                                              bool   $decode = true): Collection|Response
+        string $region = 'la1',
+        string $version = 'v4',
+        bool $decode = true): Collection|Response
     {
         $url = $this->getApiUrl("/lol/summoner/{$version}/summoners/by-name/{$summonerName}", $region);
         $response = Http::riotLolApi()->get($url)->json();

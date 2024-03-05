@@ -13,6 +13,7 @@ class LaravelRiotLolApiCommand extends Command
     public function handle(): int
     {
         $this->comment('All good!');
+
         return self::SUCCESS;
     }
 }
