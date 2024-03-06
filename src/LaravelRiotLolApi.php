@@ -34,7 +34,7 @@ class LaravelRiotLolApi
     /**
      * Method to check if the Riot ID format is valid
      */
-    protected function isValidRiotIdFormat(string $riotId): bool
+    public function isValidRiotIdFormat(string $riotId): bool
     {
         return Str::of($riotId)->isMatch('/^.+#.+$/');
     }
@@ -42,7 +42,7 @@ class LaravelRiotLolApi
     /**
      * Method to validate the Riot ID
      */
-    protected function validateRiotId(string $riotId): void
+    public function validateRiotId(string $riotId): void
     {
         if (!$this->isValidRiotIdFormat($riotId)) {
             throw new InvalidArgumentException('Invalid Riot ID format');
@@ -52,7 +52,7 @@ class LaravelRiotLolApi
     /**
      * Method to split the Riot ID
      */
-    protected function splitRiotId(string $riotId): array
+    public function splitRiotId(string $riotId): array
     {
         $this->validateRiotId($riotId);
 
@@ -76,7 +76,7 @@ class LaravelRiotLolApi
     {
         [$gameName, $tagLine] = $this->splitRiotId($riotId);
 
-        $url = $this->getApiUrl("riot/account/v1/accounts/by-riot-id/{$gameName}/{$tagLine}", $region);
+        $url = $this->getApiUrl("riot/account/v1/accounts/by-riot-id/$gameName/$tagLine", $region);
 
         $response = Http::riotLolApi()->get($url);
 
@@ -90,7 +90,7 @@ class LaravelRiotLolApi
                                             string $region = 'americas',
                                             bool   $decode = true): Collection|Response
     {
-        $url = $this->getApiUrl("riot/account/v1/accounts/by-puuid/{$puuid}", $region);
+        $url = $this->getApiUrl("riot/account/v1/accounts/by-puuid/$puuid", $region);
 
         $response = Http::riotLolApi()->get($url);
 
@@ -105,7 +105,7 @@ class LaravelRiotLolApi
                                        string $version = 'v4',
                                        bool   $decode = true): Collection|Response
     {
-        $url = $this->getApiUrl("/lol/summoner/{$version}/summoners/by-puuid/{$puuid}", $region);
+        $url = $this->getApiUrl("/lol/summoner/$version/summoners/by-puuid/$puuid", $region);
 
         $response = Http::riotLolApi()->get($url);
 
@@ -135,7 +135,7 @@ class LaravelRiotLolApi
                                               string $version = 'v4',
                                               bool   $decode = true): Collection|Response
     {
-        $url = $this->getApiUrl("/lol/summoner/{$version}/summoners/by-name/{$summonerName}", $region);
+        $url = $this->getApiUrl("/lol/summoner/$version/summoners/by-name/$summonerName", $region);
         $response = Http::riotLolApi()->get($url)->json();
 
         return $this->returnResponse($response, $decode);
