@@ -57,6 +57,14 @@ $riotApi = new LaravelRiotLolApi();
 $riotApi->getPlayerAccountByRiotId("Name#TAG")
 ```
 
+## Testing
+For testing the library in your local environment you need to follow the next steps:
+
+- Go to tests/RiotLolApiTest.php
+- Fill the configuration variables from line 12 to 16
+- Remove ->skip() from the line 17
+- Run ./vendor/bin/pest
+
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
