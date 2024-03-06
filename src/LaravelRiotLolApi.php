@@ -234,6 +234,10 @@ class LaravelRiotLolApi
         return $this->returnResponse($response, $decode);
     }
 
+    /**
+     * Method to get current active game by PUUID
+     */
+
     public function getActiveGameByPuuid(string $puuid,
                                          string $platform = 'la1',
                                          string $version = 'v5',
