@@ -9,7 +9,7 @@ This package is a wrapper for the Riot Games API in League of Legends, it is des
 
 ## Requirements
 
--   PHP 8.1 or higher
+-   PHP 8.2 or higher
 -   Laravel 10 or higher
 -   Riot Games API Key from [Riot Games Developer](https://developer.riotgames.com/)
 
